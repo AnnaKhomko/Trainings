@@ -8,16 +8,27 @@ namespace SimpleCalculation
     {
         static void Main(string[] args)
         {
-            int a, b, sum, diff, comp, quotient;
+            
+            double  sum, diff, comp, quotient;
+            long a, b;
+
             Calculation calc = new Calculation();
             if (bool.Parse(ConfigurationManager.AppSettings["UsingConsole"]).Equals(true))
             {
                 if (bool.Parse(ConfigurationManager.AppSettings["UsingLibrary"]).Equals(true))
                 {
                     Console.WriteLine("Enter first number:");
-                    a = Int32.Parse(Console.ReadLine());
+                    while (!long.TryParse(Console.ReadLine(), out a))
+                    {
+                        Console.WriteLine("Sorry, it is not a number, try again");
+                        
+                    }
                     Console.WriteLine("Enter second number:");
-                    b = Int32.Parse(Console.ReadLine());
+
+                    while (!long.TryParse(Console.ReadLine(), out b));
+                    {
+                        Console.WriteLine("Sorry, it is not a number, try again");
+                                            }
                     sum = calc.Addition(a, b);
                     diff = calc.Subtraction(a, b);
                     comp = calc.Multiplication(a, b);
@@ -27,9 +38,17 @@ namespace SimpleCalculation
                 else
                 {
                     Console.WriteLine("Enter first number:");
-                    a = Int32.Parse(Console.ReadLine());
+                    while (!long.TryParse(Console.ReadLine(), out a))
+                    {
+                        Console.WriteLine("Sorry, it is not a number, try again");
+
+                    }
                     Console.WriteLine("Enter second number:");
-                    b = Int32.Parse(Console.ReadLine());
+
+                    while (!long.TryParse(Console.ReadLine(), out b)) ;
+                    {
+                        Console.WriteLine("Sorry, it is not a number, try again");
+                    }
                     sum = Addition(a, b);
                     diff = Subtraction(a, b);
                     comp = Multiplication(a, b);
@@ -41,9 +60,9 @@ namespace SimpleCalculation
             }
             else if (bool.Parse(ConfigurationManager.AppSettings["UsingLibrary"]).Equals(true))
             {
-                
-                a = Int32.Parse(Resource1.FirstNumber);
-                b = Int32.Parse(Resource1.SecondNumber);
+
+                long.TryParse((Resource1.FirstNumber),out a);
+                long.TryParse((Resource1.FirstNumber), out b);
                 sum = calc.Addition(a, b);
                 diff = calc.Subtraction(a, b);
                 comp = calc.Multiplication(a, b);
@@ -53,8 +72,8 @@ namespace SimpleCalculation
             else
             {
 
-                a = Int32.Parse(Resource1.FirstNumber);
-                b = Int32.Parse(Resource1.SecondNumber);
+                long.TryParse((Resource1.FirstNumber), out a);
+                long.TryParse((Resource1.FirstNumber), out b);
                 sum = Addition(a, b);
                 diff = Subtraction(a, b);
                 comp = Multiplication(a, b);
@@ -68,22 +87,22 @@ namespace SimpleCalculation
 
         }
 
-        static int Addition(int a, int b)
+        static double Addition(long a, long b)
         {
             return a + b;
         }
 
-        static int Subtraction(int a, int b)
+        static double Subtraction(long a, long b)
         {
             return a - b;
         }
 
-        static int Multiplication(int a, int b)
+        static double Multiplication(long a, long b)
         {
             return a * b;
         }
 
-        static int Division(int a, int b)
+        static double Division(long a, long b)
         {
             return a / b;
         }
