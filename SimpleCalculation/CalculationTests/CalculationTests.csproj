@@ -50,8 +50,29 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calculator\Calculator.csproj">
+      <Project>{4dd931be-ccf1-4c0c-85c7-601a1e07ef2f}</Project>
+      <Name>Calculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleCalculation\SimpleCalculation.csproj">
+      <Project>{4601502d-c976-4b53-bb63-8d95b93b6e8d}</Project>
+      <Name>SimpleCalculation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

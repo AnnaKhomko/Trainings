@@ -1,0 +1,12 @@
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\bin\Debug\CalculationTests.dll
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\bin\Debug\CalculationTests.pdb
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\bin\Debug\Calculator.dll
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\bin\Debug\SimpleCalculation.exe
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\bin\Debug\Calculator.pdb
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\bin\Debug\SimpleCalculation.pdb
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\obj\Debug\CalculationTests.csprojResolveAssemblyReference.cache
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\obj\Debug\CalculationTests.Resource1.resources
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\obj\Debug\CalculationTests.csproj.GenerateResource.Cache
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\obj\Debug\CalculationTests.dll
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\CalculationTests\obj\Debug\CalculationTests.pdb
