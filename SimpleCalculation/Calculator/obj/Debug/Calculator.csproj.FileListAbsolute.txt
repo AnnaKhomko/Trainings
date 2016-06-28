@@ -1,0 +1,9 @@
+C:\Users\Hanna_Khomka@epam.com\C#Trainings\SimpleCalculation\Calculator\bin\Debug\Calculator.dll
+C:\Users\Hanna_Khomka@epam.com\C#Trainings\SimpleCalculation\Calculator\bin\Debug\Calculator.pdb
+C:\Users\Hanna_Khomka@epam.com\C#Trainings\SimpleCalculation\Calculator\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Hanna_Khomka@epam.com\C#Trainings\SimpleCalculation\Calculator\bin\Debug\nunit.framework.dll
+C:\Users\Hanna_Khomka@epam.com\C#Trainings\SimpleCalculation\Calculator\bin\Debug\WebDriver.dll
+C:\Users\Hanna_Khomka@epam.com\C#Trainings\SimpleCalculation\Calculator\bin\Debug\nunit.framework.xml
+C:\Users\Hanna_Khomka@epam.com\C#Trainings\SimpleCalculation\Calculator\bin\Debug\WebDriver.xml
+C:\Users\Hanna_Khomka@epam.com\C#Trainings\SimpleCalculation\Calculator\obj\Debug\Calculator.dll
+C:\Users\Hanna_Khomka@epam.com\C#Trainings\SimpleCalculation\Calculator\obj\Debug\Calculator.pdb
