@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Calculator
 {
     public class Calculation
     {
-        public double Addition (double a, double b)
+        public double Add (long a, long b)
         {
             return a + b;
         }
 
-        public double Subtraction(double a, double b)
+        public double Subtract(long a, long b)
         {
             return a - b;
         }
 
-        public double Multiplication(double a, double b)
+        public double Multiplicate(long a, long b)
         {
             return a * b;
         }
 
-        public double Division(double a, double b)
+        public double Divide(long a, long b)
         {
             return a / b;
         }

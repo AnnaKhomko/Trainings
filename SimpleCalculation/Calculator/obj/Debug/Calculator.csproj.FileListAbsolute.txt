@@ -16,3 +16,4 @@ C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\Calculator\bin\Debug\
 C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\Calculator\bin\Debug\WebDriver.dll
 C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\Calculator\bin\Debug\nunit.framework.xml
 C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\Calculator\bin\Debug\WebDriver.xml
+C:\Users\Hanna_Khomka@epam.com\Trainings\SimpleCalculation\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache

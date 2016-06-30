@@ -13,9 +13,9 @@ namespace CalculationTests
         {
             Calculation calc = new Calculation();
             long a, b;
-            long.TryParse((Resource1.first), out a);
-            long.TryParse((Resource1.second), out b);
-            Assert.AreEqual((a + b), calc.Addition(a, b) );
+            long.TryParse((ResourceData.first), out a);
+            long.TryParse((ResourceData.second), out b);
+            Assert.AreEqual((a + b), calc.Add(a, b) );
         }
 
         [TestMethod]
@@ -23,9 +23,9 @@ namespace CalculationTests
         {
             Calculation calc = new Calculation();
             long a, b;
-            long.TryParse((Resource1.first), out a);
-            long.TryParse((Resource1.second), out b);
-            Assert.AreEqual((a - b), calc.Subtraction(a, b));
+            long.TryParse((ResourceData.first), out a);
+            long.TryParse((ResourceData.second), out b);
+            Assert.AreEqual((a - b), calc.Subtract(a, b));
         }
 
         [TestMethod]
@@ -33,9 +33,9 @@ namespace CalculationTests
         {
             Calculation calc = new Calculation();
             long a, b;
-            long.TryParse((Resource1.first), out a);
-            long.TryParse((Resource1.second), out b);
-            Assert.AreEqual((a * b), calc.Multiplication(a, b));
+            long.TryParse((ResourceData.first), out a);
+            long.TryParse((ResourceData.second), out b);
+            Assert.AreEqual((a * b), calc.Multiplicate(a, b));
         }
 
         [TestMethod]
@@ -43,9 +43,9 @@ namespace CalculationTests
         {
             Calculation calc = new Calculation();
             long a, b;
-            long.TryParse((Resource1.first), out a);
-            long.TryParse((Resource1.second), out b);
-            Assert.AreEqual((a / b), calc.Division(a, b));
+            long.TryParse((ResourceData.first), out a);
+            long.TryParse((ResourceData.second), out b);
+            Assert.AreEqual((a / b), calc.Divide(a, b));
         }
     }
 }
