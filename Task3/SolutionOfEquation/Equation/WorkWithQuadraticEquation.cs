@@ -1,25 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SolutionOfEquation
+
+namespace Equation
 {
-    class WorkWithLinearEquation
+    public class WorkWithQuadraticEquation
     {
         int a, b, c;
-        public WorkWithLinearEquation(int a, int b, int c)
+        List<int> roots = new List<int>();
+        WorkWithLinearEquation lin = new WorkWithLinearEquation();
+        
+        public List<int> CheckCoefficients(int a, int b, int c)
         {
-            this.a = a;
-            this.b = b;
-            this.c = c;
-        }
 
-        public void CheckCoefficients(int a, int b, int c)
-        {
-            
-            List<int> roots = new List<int>();
             if (a == 0 && b == 0 && c == 0)
             {
                 Console.WriteLine("root of the equation is any number");
@@ -34,7 +27,7 @@ namespace SolutionOfEquation
             }
             else if (a == 0)
             {
-
+                lin.CheckCoefficients(b, c);
             }
             else
             {
@@ -50,7 +43,13 @@ namespace SolutionOfEquation
                     roots.Add(FindSpecialRoot(a, b));
 
                 }
+                else
+                {
+                    
+                    roots = FindRoots(a, b, discriminant);
+                }
             }
+            return roots;
         }
         public int FindDiscriminant(int a, int b, int c)
         {
@@ -83,10 +82,14 @@ namespace SolutionOfEquation
             return root;
         }
 
-        public int FindRoots(int a, int b)
+        public List<int> FindRoots(int a, int b, int discriminant)
         {
-            int root = b * (-1) / (2 * a);
-            return root;
+            List<int> roots = new List<int>();
+            int root1 = (int)(b * (-1) - Math.Sqrt(Convert.ToDouble(discriminant))) / (2 * a);
+            roots.Add(root1);
+            int root2 = (int)(b * (-1) + Math.Sqrt(Convert.ToDouble(discriminant))) / (2 * a);
+            roots.Add(root2);
+            return roots;
         }
     }
 }
