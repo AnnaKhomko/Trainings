@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WorkWithDirectory {
+namespace Equation {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace WorkWithDirectory {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WorkWithDirectory.ResourceData", typeof(ResourceData).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Equation.ResourceData", typeof(ResourceData).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,16 +61,7 @@ namespace WorkWithDirectory {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\Hanna_Khomka@epam.com\Documents\Trainings.
-        /// </summary>
-        internal static string DirectoryPath {
-            get {
-                return ResourceManager.GetString("DirectoryPath", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to C:\Users\Hanna_Khomka@epam.com\Documents\Trainings\Resource.txt.
+        ///   Looks up a localized string similar to C:\Users\Hanna_Khomka@epam.com\Documents\Trainings\log.txt.
         /// </summary>
         internal static string FilePath {
             get {

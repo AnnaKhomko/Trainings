@@ -61,6 +61,15 @@ namespace SolutionOfEquation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C:\Users\Hanna_Khomka@epam.com\Documents\Trainings\log.txt.
+        /// </summary>
+        internal static string FilePath {
+            get {
+                return ResourceManager.GetString("FilePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C:\Users\Hanna_Khomka@epam.com\Documents\Trainings\Matrix.txt.
         /// </summary>
         internal static string Path {

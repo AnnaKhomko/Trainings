@@ -9,12 +9,11 @@ namespace Equation
     {
         public string[] ReadFromFile(String path)
         {
-
             string[] mass = File.ReadAllLines(path);
             return mass;
         }
 
-        public int[,] ReadMatrix(string[] mass)
+        public double[,] ReadMatrix(string[] mass)
         {
             int n, m;
             n = Convert.ToInt32(mass[0]);
@@ -22,26 +21,19 @@ namespace Equation
 
             Console.WriteLine(n);
             Console.WriteLine(m);
-            int[,] matrix1 = new int[n, m];
+            double[,] matrix1 = new double[n, m];
             for (int p = 0; p < n; p++)
             {
-                int[] matr = mass[p + 2].Split(new char[] { ' ' },
-              StringSplitOptions.RemoveEmptyEntries).Select(s => int.Parse(s)).ToArray();
+                double[] matr = mass[p + 2].Split(new char[] { ' ' },
+              StringSplitOptions.RemoveEmptyEntries).Select(s => Double.Parse(s)).ToArray();
                 for (int i = 0; i < matr.Length; i++)
                 {
                     matrix1[p, i] = matr[i];
                 }
             }
-            Console.WriteLine("Матрица:");
+            Console.WriteLine("Matrix:");
             Print(matrix1);
-            //for (int i = 0; i < n; i++)
-            //{
-            //    for (int j = 0; j < m; j++)
-            //    {
-            //        Console.Write(matrix1[i, j]);
-            //    }
-            //    Console.WriteLine(" ");
-            //}
+
             return matrix1;
         }
 
@@ -55,11 +47,11 @@ namespace Equation
             mass = mas.ToArray();
             return mass;
         }
-         
-        public int[,] MatrixMultiplication(int [,] a, int [,] b )
+
+        public double[,] MultiplicateMatrix(double[,] a, double[,] b)
         {
-            if (a.GetLength(1) != b.GetLength(0)) throw new Exception("can't miltiplicate matrix");
-            int[,] res = new int[a.GetLength(0), b.GetLength(1)];
+            if (a.GetLength(1) != b.GetLength(0)) Console.WriteLine("can't miltiplicate matrix");
+            double[,] res = new double[a.GetLength(0), b.GetLength(1)];
             for (int i = 0; i < a.GetLength(0); i++)
             {
                 for (int j = 0; j < b.GetLength(1); j++)
@@ -72,25 +64,17 @@ namespace Equation
             }
             return res;
         }
-       public static void Print(int[,] a)
+        public void Print(double[,] a)
         {
             for (int i = 0; i < a.GetLength(0); i++)
             {
                 for (int j = 0; j < a.GetLength(1); j++)
                 {
-                    Console.Write("{0} ", a[i, j]);
+                    Console.Write("{0} ", a[i, j].ToString("0.00"));
                 }
                 Console.WriteLine();
             }
         }
-
-
-
-
-
-
-
     }
-
-    }
+}
 
