@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task4._4
+namespace Task4._5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            ConsoleReadWrite readWrite = new ConsoleReadWrite();
-            readWrite.RunMenu();
+            ReadWrite readWrite = new ReadWrite();
+            readWrite.WriteCount();
+            Console.ReadLine();
         }
     }
 }

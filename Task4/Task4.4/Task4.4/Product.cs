@@ -14,7 +14,7 @@ namespace Task4._4
 
         public override string ToString()
         {
-           return $"Name: {Name} \nCost: {Cost} \nAmount: {Amount}";
+           return $"Name:{Name}\n   Cost: {Cost} \n   Amount: {Amount}\n";
         }
         
     }

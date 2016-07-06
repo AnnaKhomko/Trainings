@@ -10,12 +10,8 @@ namespace Task4._3
     {
         static void Main(string[] args)
         {
-
-            for (int i = 0; i < 10; i++)
-            {
-                MyClass mc = new MyClass();
-            }
-            Console.WriteLine($"Object was created for: {MyClass.count} times");
+            Run run = new Run();
+            run.ShowResult();
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
         }

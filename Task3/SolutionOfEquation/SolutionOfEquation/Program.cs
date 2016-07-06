@@ -59,11 +59,11 @@ namespace SolutionOfEquation
                             {
                                 Console.WriteLine("Please enter correct c.");
                                 File.AppendAllText(ResourceData.FilePath, "Incorrect coefficient c");
-                                b = Console.ReadLine();
+                                c = Console.ReadLine();
                             }
 
-                            File.AppendAllText(ResourceData.FilePath, $"{corA}x^2 + {corA}x + {corA} = 0");
-                            Console.WriteLine($"{corA}x^2 + {corA}x + {corA} = 0");
+                            File.AppendAllText(ResourceData.FilePath, $"{corA}x^2 + {corB}x + {corC} = 0");
+                            Console.WriteLine($"{corA}x^2 + {corB}x + {corC} = 0");
                             quadr.CheckCoefficients(corA, corB, corC);
 
                             break;

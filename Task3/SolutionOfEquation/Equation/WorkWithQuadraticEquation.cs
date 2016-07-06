@@ -6,7 +6,7 @@ namespace Equation
 {
     public class WorkWithQuadraticEquation
     {
-        int a, b, c;
+      
         List<int> roots = new List<int>();
         WorkWithLinearEquation lin = new WorkWithLinearEquation();
         

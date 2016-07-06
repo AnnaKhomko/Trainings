@@ -36,9 +36,10 @@ namespace Task4._4
         public void ShowProducts(List <Product> order)
         {
             int i = -1;
+            Console.WriteLine("List of your products:\n");
             foreach (var pr in order)
             {
-                Console.WriteLine( ++i + " " + pr.ToString());
+                Console.WriteLine( ++i + ") " + pr.ToString());
             }
         }
 

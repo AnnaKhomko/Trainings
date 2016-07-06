@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task4._1
 {
-    class Point
+    public class Point
     {
         private int x, y;
 
