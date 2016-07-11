@@ -9,46 +9,48 @@ namespace Task5._1
 {
     public class WorkWithList : ICollection
     {
-        public List<String> CheckingList { get; set; }
+        public List<int> CheckingList { get; set; }
 
         public WorkWithList()
         {
-           this.CheckingList = new List<string>();
+           this.CheckingList = new List<int>();
         }
 
-        public void AddElements()
+        public void AddElements(int count)
         {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            for (int i = 0; i < 50000; i++)
+            for (int i = 0; i < count; i++)
             {
-                this.CheckingList.Add("HelloWorld");
+                this.CheckingList.Add(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Add to List {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void FindInList()
+        public void FindElement(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            ;
+            for (int i = 0; i < count; i++)
+                this.CheckingList.Contains(rand.Next(this.CheckingList.Count));
         }
 
         public void ReadElements()
         {
-            string element;
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
+            int element;
             for (int i = 0; i < this.CheckingList.Count; i++)
             {
                 element = this.CheckingList.ElementAt(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Read from List {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void RemoveElements()
+        public void RemoveElements(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            for (int i = 0; i < count; i++)
+                this.CheckingList.Remove(rand.Next(this.CheckingList.Count));
+        }
+
+        public override string ToString()
+        {
+            return "List";
         }
     }
 }

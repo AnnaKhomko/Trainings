@@ -9,46 +9,47 @@ namespace Task5._1
 {
     public class WorkWithSortedSet : ICollection
     {
-        public SortedSet<string> ChekingSortedSet { get; set; }
+        public SortedSet<int> ChekingSortedSet { get; set; }
 
         public WorkWithSortedSet()
         {
-            this.ChekingSortedSet = new SortedSet<string>();
+            this.ChekingSortedSet = new SortedSet<int>();
         }
 
-        public void AddElements()
+        public void AddElements(int count)
         {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            for (int i = 0; i < 50000; i++)
+            for (int i = 0; i < count; i++)
             {
-                this.ChekingSortedSet.Add("HelloWorld");
+                this.ChekingSortedSet.Add(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Add to SortedSet {stopWatch.ElapsedMilliseconds.ToString()}");
-        }
+        } 
 
-        public void FindInList()
+        public void FindElement(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            for (int i = 0; i < count; i++)
+                this.ChekingSortedSet.Contains(rand.Next(this.ChekingSortedSet.Count));
         }
 
         public void ReadElements()
         {
-            string element;
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
+            int element;
             for (int i = 0; i < this.ChekingSortedSet.Count; i++)
             {
                 element = this.ChekingSortedSet.ElementAt(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Read from SortedSet {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void RemoveElements()
+        public void RemoveElements(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            for (int i = 0; i < count; i++)
+                this.ChekingSortedSet.Remove(rand.Next(this.ChekingSortedSet.Count));
+        }
+
+        public override string ToString()
+        {
+            return "Sorted Set";
         }
     }
 }

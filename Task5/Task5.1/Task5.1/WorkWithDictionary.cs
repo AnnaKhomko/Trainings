@@ -9,45 +9,49 @@ namespace Task5._1
 {
     public class WorkWithDictionary : ICollection
     {
-        public Dictionary<int, string> CheckingDictionary { get; set; }
+        public Dictionary<int, int> CheckingDictionary { get; set; }
 
         public WorkWithDictionary()
         {
-            this.CheckingDictionary = new Dictionary<int, string>();
+            this.CheckingDictionary = new Dictionary<int, int>();
         }
 
-        public void AddElements()
+        public void AddElements(int count)
         {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            for (int i = 0; i < 50000; i++)
+            
+            for (int i = 0; i < count; i++)
             {
-                this.CheckingDictionary.Add(i, "HelloWorld");
+                this.CheckingDictionary.Add(i, i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Add to Dictionary {stopWatch.ElapsedMilliseconds.ToString()}");
-        }
-
-        public void FindInList()
-        {
-            throw new NotImplementedException();
+            
         }
 
         public void ReadElements()
         {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
             for (int i = 0; i < this.CheckingDictionary.Count; i++)
             {
                 var element = this.CheckingDictionary.ElementAt(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Read from Dictionary {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void RemoveElements()
+        public void RemoveElements(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            int key = rand.Next(this.CheckingDictionary.Count);
+            for (int i = 0; i < count; i++)
+            this.CheckingDictionary.Remove(key);
+        }
+
+        public void FindElement(int count)
+        {
+            Random rand = new Random();
+            for (int i = 0; i < count; i++)
+                this.CheckingDictionary.ContainsValue(rand.Next(this.CheckingDictionary.Count));
+        }
+
+        public override string ToString()
+        {
+            return "Dictionary";
         }
     }
 }

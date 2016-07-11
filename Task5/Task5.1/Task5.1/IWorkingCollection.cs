@@ -8,10 +8,10 @@ namespace Task5._1
 {
     public interface ICollection
     {
-        void AddElements();
+        void AddElements(int count);
         void ReadElements();
-        void FindInList();
-        void RemoveElements();
+        void FindElement(int count);
+        void RemoveElements(int count);
 
     }
 }

@@ -8,7 +8,7 @@ namespace Task4._2
 {
     public class ReadWrite
     {
-        public void ReadIndexForFibonachi()
+        public void WriteFibonachi()
         {
             FibonachiAndFactorial fibAndFact = new FibonachiAndFactorial();
             CheckExceptions check = new CheckExceptions();
@@ -25,7 +25,7 @@ namespace Task4._2
             
         }
 
-        public void ReadIndexForFactorial()
+        public void WriteFactorial()
         {
             FibonachiAndFactorial fibAndFact = new FibonachiAndFactorial();
             CheckExceptions check = new CheckExceptions();

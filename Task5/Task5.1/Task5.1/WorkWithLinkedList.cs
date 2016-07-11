@@ -9,46 +9,50 @@ namespace Task5._1
 {
     public class WorkWithLinkedList : ICollection
     {
-        public LinkedList<String> CheckingLinkedList { get; set; }
+        public LinkedList<int> CheckingLinkedList { get; set; }
 
         public WorkWithLinkedList()
         {
-            this.CheckingLinkedList = new LinkedList<string>();
+            this.CheckingLinkedList = new LinkedList<int>();
         }
 
-        public void AddElements()
+        public void AddElements(int count)
         {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            for (int i = 0; i < 50000; i++)
+            for (int i = 0; i < count; i++)
             {
-                this.CheckingLinkedList.AddFirst("HelloWorld");
+                this.CheckingLinkedList.AddFirst(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Add to LinkedList {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void FindInList()
+        public void FindElement(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            int item = rand.Next(this.CheckingLinkedList.Count);
+            for (int i = 0; i < count; i++)
+                this.CheckingLinkedList.Contains(item);
         }
 
         public void ReadElements()
         {
-            string element;
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
+            int element;
             for (int i = 0; i < this.CheckingLinkedList.Count; i++)
             {
                 element = this.CheckingLinkedList.ElementAt(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Read from LinkedList {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void RemoveElements()
+        public void RemoveElements(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            for (int i = 0; i < count; i++)
+            {
+                this.CheckingLinkedList.Remove(rand.Next(this.CheckingLinkedList.Count));
+            }
+        }
+
+        public override string ToString()
+        {
+            return "Linked List";
         }
     }
 }

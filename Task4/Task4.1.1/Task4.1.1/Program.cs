@@ -4,17 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task4._2
+namespace Task4._5
 {
     class Program
     {
         static void Main(string[] args)
         {
             ReadWrite readWrite = new ReadWrite();
-            Console.WriteLine("Work with fibonachi");
-            readWrite.WriteFibonachi();
-            Console.WriteLine("Work with factorial");
-            readWrite.WriteFactorial();
+            readWrite.WriteCount();
             Console.ReadLine();
         }
     }

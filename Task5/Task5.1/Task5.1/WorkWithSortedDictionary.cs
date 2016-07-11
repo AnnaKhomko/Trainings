@@ -9,46 +9,47 @@ namespace Task5._1
 {
     public class WorkWithSortedDictionary : ICollection
     {
-        public SortedDictionary<int, string> CheckingSortedDictionary { get; set; }
+        public SortedDictionary<int, int> CheckingSortedDictionary { get; set; }
 
         public WorkWithSortedDictionary()
         {
-            this.CheckingSortedDictionary = new SortedDictionary<int, string>();
+            this.CheckingSortedDictionary = new SortedDictionary<int, int>();
         }
 
-        public void AddElements()
+        public void AddElements(int count)
         {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            for (int i = 0; i < 50000; i++)
+            for (int i = 0; i < count; i++)
             {
-                this.CheckingSortedDictionary.Add(i, "HelloWorld");
+                this.CheckingSortedDictionary.Add(i, i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Add to SotredDictionary {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void FindInList()
+        public void FindElement(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            for (int i = 0; i < count; i++)
+                this.CheckingSortedDictionary.ContainsValue(rand.Next(this.CheckingSortedDictionary.Count));
         }
 
         public void ReadElements()
         {
-           
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
             for (int i = 0; i < this.CheckingSortedDictionary.Count; i++)
             {
                var  element = this.CheckingSortedDictionary.ElementAt(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Read from SortedDictionary {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void RemoveElements()
+        public void RemoveElements(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            int key = rand.Next(int.Parse(ResourceData.CountForAdd));
+            for (int i = 0; i < count; i++)
+                this.CheckingSortedDictionary.Remove(rand.Next(this.CheckingSortedDictionary.Count));
+        }
+
+        public override string ToString()
+        {
+            return "Sorted Dictionary";
         }
     }
 }

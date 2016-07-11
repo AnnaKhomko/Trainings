@@ -9,45 +9,47 @@ namespace Task5._1
 {
     public class WorkWithQueue : ICollection
     {
-        public Queue<string> CheckingQueue { get; set; }
+        public Queue<int> CheckingQueue { get; set; }
 
         public WorkWithQueue()
         {
-            this.CheckingQueue = new Queue<string>();
+            this.CheckingQueue = new Queue<int>();
         }
-        public void AddElements()
+        public void AddElements(int count)
         {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            for (int i = 0; i < 50000; i++)
+            for (int i = 0; i < count; i++)
             {
-                this.CheckingQueue.Enqueue("HelloWorld");
+                this.CheckingQueue.Enqueue(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Add to Queue {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void FindInList()
+        public void FindElement(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            ;
+            for (int i = 0; i < count; i++)
+                this.CheckingQueue.Contains(rand.Next(this.CheckingQueue.Count));
         }
 
         public void ReadElements()
         {
-            string element;
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
+            int element;
             for (int i = 0; i < this.CheckingQueue.Count; i++)
             {
                 element = this.CheckingQueue.ElementAt(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Read from Queue {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void RemoveElements()
+        public void RemoveElements(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            for (int i = 0; i < this.CheckingQueue.Count; i++)
+                this.CheckingQueue.Dequeue();
+        }
+
+        public override string ToString()
+        {
+            return "Queue";
         }
     }
 }

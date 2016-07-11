@@ -9,47 +9,46 @@ namespace Task5._1
 {
     public class WorkWithStack : ICollection
     {
-        public Stack<string> ChekingStack { get; set; }
+        public Stack<int> ChekingStack { get; set; }
 
         public WorkWithStack()
         {
-            this.ChekingStack = new Stack<string>();
+            this.ChekingStack = new Stack<int>();
         }
 
-        public void AddElements()
+        public void AddElements(int count)
         {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            for (int i = 0; i < 50000; i++)
+            for (int i = 0; i < count; i++)
             {
-                this.ChekingStack.Push("HelloWorld");
+                this.ChekingStack.Push(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Add to Stack {stopWatch.ElapsedMilliseconds.ToString()}");
-
         }
 
-        public void FindInList()
+        public void FindElement(int count)
         {
-            throw new NotImplementedException();
+            Random rand = new Random();
+            for (int i = 0; i < count; i++)
+                this.ChekingStack.Contains(rand.Next(this.ChekingStack.Count));
         }
 
         public void ReadElements()
         {
-            string element;
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
+            int element;
             for (int i = 0; i < this.ChekingStack.Count; i++)
             {
                 element = this.ChekingStack.ElementAt(i);
             }
-            stopWatch.Stop();
-            Console.WriteLine($" Read from Stack {stopWatch.ElapsedMilliseconds.ToString()}");
         }
 
-        public void RemoveElements()
+        public void RemoveElements(int count)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < count; i++)
+                this.ChekingStack.Pop();
+        }
+
+        public override string ToString()
+        {
+            return "Stack";
         }
     }
 }

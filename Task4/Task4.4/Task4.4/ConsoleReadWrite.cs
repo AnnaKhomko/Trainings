@@ -86,7 +86,6 @@ namespace Task4._4
             string uncheckedIndex = Console.ReadLine();
             Checks checks = new Checks();
             deleteProduct = checks.CheckInput(uncheckedIndex);
-            deleteProduct = int.Parse(Console.ReadLine());
             products = bucket.DeleteProduct(deleteProduct);
             Console.WriteLine("Product was deleted successfully ");
         }
