@@ -18,11 +18,11 @@ namespace Task5._1
         {
             this.AllCollections = new List<ICollection>();
             AllCollections.Add(new WorkWithDictionary());
-            AllCollections.Add(new WorkWithLinkedList());
+            //AllCollections.Add(new WorkWithLinkedList());
             AllCollections.Add(new WorkWithList());
             AllCollections.Add(new WorkWithQueue());
-            AllCollections.Add(new WorkWithSortedDictionary());
-            AllCollections.Add(new WorkWithSortedSet());
+            //AllCollections.Add(new WorkWithSortedDictionary());
+            //AllCollections.Add(new WorkWithSortedSet());
             AllCollections.Add(new WorkWithStack());
 
             this.Result = new List<string>();

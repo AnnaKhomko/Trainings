@@ -9,18 +9,18 @@ namespace Task5._1
 {
     public class WorkWithList : ICollection
     {
-        public List<int> CheckingList { get; set; }
+        public List<int> List { get; set; }
 
         public WorkWithList()
         {
-           this.CheckingList = new List<int>();
+           this.List = new List<int>();
         }
 
         public void AddElements(int count)
         {
             for (int i = 0; i < count; i++)
             {
-                this.CheckingList.Add(i);
+                this.List.Add(i);
             }
         }
 
@@ -29,15 +29,15 @@ namespace Task5._1
             Random rand = new Random();
             ;
             for (int i = 0; i < count; i++)
-                this.CheckingList.Contains(rand.Next(this.CheckingList.Count));
+                this.List.Contains(rand.Next(this.List.Count));
         }
 
         public void ReadElements()
         {
             int element;
-            for (int i = 0; i < this.CheckingList.Count; i++)
+            for (int i = 0; i < this.List.Count; i++)
             {
-                element = this.CheckingList.ElementAt(i);
+                element = this.List.ElementAt(i);
             }
         }
 
@@ -45,7 +45,7 @@ namespace Task5._1
         {
             Random rand = new Random();
             for (int i = 0; i < count; i++)
-                this.CheckingList.Remove(rand.Next(this.CheckingList.Count));
+                this.List.Remove(rand.Next(this.List.Count));
         }
 
         public override string ToString()

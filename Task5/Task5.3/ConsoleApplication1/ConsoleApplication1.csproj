@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{27BC574C-219F-42A3-8216-BA5CA327C87D}</ProjectGuid>
+    <ProjectGuid>{4856616B-5DA4-49C9-9BAF-FCB4DFED47D0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Task5._1</RootNamespace>
-    <AssemblyName>Task5.1</AssemblyName>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,31 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResourceData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ResourceData.resx</DependentUpon>
-    </Compile>
-    <Compile Include="TimeMeasurement.cs" />
-    <Compile Include="WorkWithDictionary.cs" />
-    <Compile Include="WorkWithLinkedList.cs" />
-    <Compile Include="WorkWithList.cs" />
-    <Compile Include="WorkWithQueue.cs" />
-    <Compile Include="WorkWithSortedDictionary.cs" />
-    <Compile Include="WorkWithSortedSet.cs" />
-    <Compile Include="WorkWithStack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ResourceData.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ResourceData.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <ProjectReference Include="..\Task5.3\Task5.3.csproj">
+      <Project>{7526e519-b50a-4e01-99ce-372492a4513b}</Project>
+      <Name>Task5.3</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,35 +9,35 @@ namespace Task5._1
 {
     public class WorkWithLinkedList : ICollection
     {
-        public LinkedList<int> CheckingLinkedList { get; set; }
+        public LinkedList<int> LinkedList { get; set; }
 
         public WorkWithLinkedList()
         {
-            this.CheckingLinkedList = new LinkedList<int>();
+            this.LinkedList = new LinkedList<int>();
         }
 
         public void AddElements(int count)
         {
             for (int i = 0; i < count; i++)
             {
-                this.CheckingLinkedList.AddFirst(i);
+                this.LinkedList.AddFirst(i);
             }
         }
 
         public void FindElement(int count)
         {
             Random rand = new Random();
-            int item = rand.Next(this.CheckingLinkedList.Count);
+            int item = rand.Next(this.LinkedList.Count);
             for (int i = 0; i < count; i++)
-                this.CheckingLinkedList.Contains(item);
+                this.LinkedList.Contains(item);
         }
 
         public void ReadElements()
         {
             int element;
-            for (int i = 0; i < this.CheckingLinkedList.Count; i++)
+            for (int i = 0; i < this.LinkedList.Count; i++)
             {
-                element = this.CheckingLinkedList.ElementAt(i);
+                element = this.LinkedList.ElementAt(i);
             }
         }
 
@@ -46,7 +46,7 @@ namespace Task5._1
             Random rand = new Random();
             for (int i = 0; i < count; i++)
             {
-                this.CheckingLinkedList.Remove(rand.Next(this.CheckingLinkedList.Count));
+                this.LinkedList.Remove(rand.Next(this.LinkedList.Count));
             }
         }
 

@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BigIntegerExtensions.cs" />
+    <Compile Include="Checks.cs" />
+    <Compile Include="ConsoleReadWrite.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkWithFibonachi.cs" />

@@ -18,10 +18,10 @@ namespace Task5._2
             return res;
         }
 
-       
-        public bool DivideByFive(List<BigInteger> FibonacciSeries)
+
+        public List<BigInteger> DivideByFive(List<BigInteger> FibonacciSeries)
         {
-            var result = FibonacciSeries.Any(n => n%5 == 0);
+            var result = FibonacciSeries.Where(n => n%5 == 0).ToList();
             return result;
         }
 

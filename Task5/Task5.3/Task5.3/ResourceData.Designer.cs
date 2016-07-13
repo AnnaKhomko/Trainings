@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Task5._1 {
+namespace Task5._3 {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Task5._1 {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Task5._1.ResourceData", typeof(ResourceData).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Task5._3.ResourceData", typeof(ResourceData).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,38 +61,11 @@ namespace Task5._1 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 50000.
+        ///   Looks up a localized string similar to C:\Users\Hanna_Khomka@epam.com\Documents\Trainings\RD. HW - AT Lab#. 05 - Customers.xml.
         /// </summary>
-        internal static string CountForAdd {
+        internal static string PathToXMLFile {
             get {
-                return ResourceManager.GetString("CountForAdd", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 50000.
-        /// </summary>
-        internal static string CountForDelete {
-            get {
-                return ResourceManager.GetString("CountForDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 50000.
-        /// </summary>
-        internal static string CountForFind {
-            get {
-                return ResourceManager.GetString("CountForFind", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to C:\Users\Hanna_Khomka@epam.com\Documents\Trainings\CollectionLog.txt.
-        /// </summary>
-        internal static string FilePath {
-            get {
-                return ResourceManager.GetString("FilePath", resourceCulture);
+                return ResourceManager.GetString("PathToXMLFile", resourceCulture);
             }
         }
     }

@@ -9,17 +9,17 @@ namespace Task5._1
 {
     public class WorkWithQueue : ICollection
     {
-        public Queue<int> CheckingQueue { get; set; }
+        public Queue<int> Queue { get; set; }
 
         public WorkWithQueue()
         {
-            this.CheckingQueue = new Queue<int>();
+            this.Queue = new Queue<int>();
         }
         public void AddElements(int count)
         {
             for (int i = 0; i < count; i++)
             {
-                this.CheckingQueue.Enqueue(i);
+                this.Queue.Enqueue(i);
             }
         }
 
@@ -28,23 +28,23 @@ namespace Task5._1
             Random rand = new Random();
             ;
             for (int i = 0; i < count; i++)
-                this.CheckingQueue.Contains(rand.Next(this.CheckingQueue.Count));
+                this.Queue.Contains(rand.Next(this.Queue.Count));
         }
 
         public void ReadElements()
         {
             int element;
-            for (int i = 0; i < this.CheckingQueue.Count; i++)
+            for (int i = 0; i < this.Queue.Count; i++)
             {
-                element = this.CheckingQueue.ElementAt(i);
+                element = this.Queue.ElementAt(i);
             }
         }
 
         public void RemoveElements(int count)
         {
             Random rand = new Random();
-            for (int i = 0; i < this.CheckingQueue.Count; i++)
-                this.CheckingQueue.Dequeue();
+            for (int i = 0; i < this.Queue.Count; i++)
+                this.Queue.Dequeue();
         }
 
         public override string ToString()

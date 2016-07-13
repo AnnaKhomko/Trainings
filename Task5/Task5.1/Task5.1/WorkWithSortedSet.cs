@@ -9,18 +9,18 @@ namespace Task5._1
 {
     public class WorkWithSortedSet : ICollection
     {
-        public SortedSet<int> ChekingSortedSet { get; set; }
+        public SortedSet<int> SortedSet { get; set; }
 
         public WorkWithSortedSet()
         {
-            this.ChekingSortedSet = new SortedSet<int>();
+            this.SortedSet = new SortedSet<int>();
         }
 
         public void AddElements(int count)
         {
             for (int i = 0; i < count; i++)
             {
-                this.ChekingSortedSet.Add(i);
+                this.SortedSet.Add(i);
             }
         } 
 
@@ -28,15 +28,15 @@ namespace Task5._1
         {
             Random rand = new Random();
             for (int i = 0; i < count; i++)
-                this.ChekingSortedSet.Contains(rand.Next(this.ChekingSortedSet.Count));
+                this.SortedSet.Contains(rand.Next(this.SortedSet.Count));
         }
 
         public void ReadElements()
         {
             int element;
-            for (int i = 0; i < this.ChekingSortedSet.Count; i++)
+            for (int i = 0; i < this.SortedSet.Count; i++)
             {
-                element = this.ChekingSortedSet.ElementAt(i);
+                element = this.SortedSet.ElementAt(i);
             }
         }
 
@@ -44,7 +44,7 @@ namespace Task5._1
         {
             Random rand = new Random();
             for (int i = 0; i < count; i++)
-                this.ChekingSortedSet.Remove(rand.Next(this.ChekingSortedSet.Count));
+                this.SortedSet.Remove(rand.Next(this.SortedSet.Count));
         }
 
         public override string ToString()

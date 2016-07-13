@@ -53,7 +53,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="BaseTestClass.cs" />
-    <Compile Include="UnitTests.cs" />
+    <Compile Include="MSTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,8 +63,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="OrderedTest.orderedtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="OrderedTest2.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Choose>

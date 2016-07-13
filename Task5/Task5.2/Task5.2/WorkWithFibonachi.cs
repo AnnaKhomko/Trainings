@@ -29,12 +29,6 @@ namespace Task5._2
             return a;
         }
 
-        public List<BigInteger> CountFirstTwoThouthand(BigInteger a)
-        {
-            List<BigInteger> fibonachiNumbers = new List<BigInteger>();
-            fibonachiNumbers.Add(a);
-           
-            return fibonachiNumbers;
-        }
+        
     }
 }

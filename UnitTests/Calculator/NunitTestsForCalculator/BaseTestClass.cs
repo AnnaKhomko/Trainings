@@ -11,7 +11,7 @@ namespace NunitTestsForCalculator
     public class BaseTestClass
     {
         public Calculation calc;
-       // public static TestContext context; 
+       
 
         [TestFixtureSetUp]
         public static void ClassInit()

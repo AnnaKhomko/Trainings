@@ -9,18 +9,18 @@ namespace Task5._1
 {
     public class WorkWithStack : ICollection
     {
-        public Stack<int> ChekingStack { get; set; }
+        public Stack<int> Stack { get; set; }
 
         public WorkWithStack()
         {
-            this.ChekingStack = new Stack<int>();
+            this.Stack = new Stack<int>();
         }
 
         public void AddElements(int count)
         {
             for (int i = 0; i < count; i++)
             {
-                this.ChekingStack.Push(i);
+                this.Stack.Push(i);
             }
         }
 
@@ -28,22 +28,22 @@ namespace Task5._1
         {
             Random rand = new Random();
             for (int i = 0; i < count; i++)
-                this.ChekingStack.Contains(rand.Next(this.ChekingStack.Count));
+                this.Stack.Contains(rand.Next(this.Stack.Count));
         }
 
         public void ReadElements()
         {
             int element;
-            for (int i = 0; i < this.ChekingStack.Count; i++)
+            for (int i = 0; i < this.Stack.Count; i++)
             {
-                element = this.ChekingStack.ElementAt(i);
+                element = this.Stack.ElementAt(i);
             }
         }
 
         public void RemoveElements(int count)
         {
             for (int i = 0; i < count; i++)
-                this.ChekingStack.Pop();
+                this.Stack.Pop();
         }
 
         public override string ToString()

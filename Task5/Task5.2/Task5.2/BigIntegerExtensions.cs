@@ -37,8 +37,7 @@ namespace Task5._2
             {
                 do
                 {
-                    // This may raise an exception in Mono 2.10.8 and earlier.
-                    // http://bugzilla.xamarin.com/show_bug.cgi?id=2761
+                   
                     rng.GetBytes(bytes);
                     a = new BigInteger(bytes);
                 }

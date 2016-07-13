@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest2" storage="c:\users\hanna_khomka@epam.com\trainings\unittests\calculator\testsgforcalculator\orderedtest2.orderedtest" id="107a5233-4e3f-43c2-8005-176506a8c025" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="30cb37db-7958-a26a-864e-180cb9563b0f" name="TestMultiplication" storage="bin\debug\testsgforcalculator.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="f61f981c-86f1-bbcc-be6e-ba7b641693f9" name="TestSubstraction" storage="bin\debug\testsgforcalculator.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="10925c65-7e59-e127-347c-83b83b15a799" name="TestDivision" storage="bin\debug\testsgforcalculator.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="c1995fb3-d8a3-fe88-f3b3-fc5a76840893" name="TestDivisionByZero" storage="bin\debug\testsgforcalculator.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="f15a26f5-a0b4-ffb7-03b4-ba2bee65977a" name="TestAddition" storage="bin\debug\testsgforcalculator.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
