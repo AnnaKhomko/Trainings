@@ -85,7 +85,7 @@ namespace Task5._2
                         }
                     default:
                         {
-                           
+                            Console.WriteLine("Invalid menu item");
                             break;
                         }
                 }

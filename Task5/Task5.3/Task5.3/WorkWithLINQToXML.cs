@@ -93,10 +93,10 @@ namespace Task5._3
                     name = s.Element("name").Value,
                     listOfDates = s.Element("orders")
                 .Elements("order")
-                .Select(p => DateTime.Parse(p.Element("orderdate").Value).ToString("yyyy.MM"))
+                .Select(d => DateTime.Parse(d.Element("orderdate").Value).ToString("yyyy.MM"))
                 .ToList()
-                }).Where(t => t.listOfDates.Count > 0)
-                .ToDictionary(t => t.name, t => t.listOfDates.First());
+                }).Where(count => count.listOfDates.Count > 0)
+                .ToDictionary(k => k.name, v => v.listOfDates.First());
 
             return dateOfFirstOrder;
         }
@@ -108,18 +108,18 @@ namespace Task5._3
         public void OrderedListOfDateOfFirstOrder()
         {
             var resultList = Doc.Root.Elements("customer")
-                .Where(n => n.Element("orders")
+                .Where(el => el.Element("orders")
                 .Elements("order").Count() >= 1)
-                .Select(n => new
+                .Select(s => new
                 {
 
-                    name = n.Element("name").Value,
-                    ListOfTotall = n.Element("orders")
+                    name = s.Element("name").Value,
+                    ListOfTotall = s.Element("orders")
                      .Elements("order")
-                     .Select(g => Decimal.Parse(g.Element("total").Value)).Sum(),
-                    date = n.Element("orders")
+                     .Select(n => Decimal.Parse(n.Element("total").Value)).Sum(),
+                    date = s.Element("orders")
                     .Elements("order")
-                    .Select(g => DateTime.Parse(g.Element("orderdate").Value))
+                    .Select(d => DateTime.Parse(d.Element("orderdate").Value))
                     .ToList().First().ToString("yyyy.MM")
 
 
@@ -147,9 +147,9 @@ namespace Task5._3
         public void GetListOfOrders()
         {
             var listOfCustomers = Doc.Root.Elements("customer").ToList();
-            foreach (var c in listOfCustomers)
+            foreach (var order in listOfCustomers)
             {
-                this.listOfOrders.AddRange(c.Element("orders").Elements("order").ToList());
+                this.listOfOrders.AddRange(order.Element("orders").Elements("order").ToList());
             }
         }
 
@@ -174,11 +174,11 @@ namespace Task5._3
         {
 
             var averageIntensity = Doc.Root
-                .Elements("customer").GroupBy(n => n.Element("city").Value).ToDictionary(
-                    g => g.Key,
-                    g => (Decimal)g
+                .Elements("customer").GroupBy(s => s.Element("city").Value).ToDictionary(
+                    k => k.Key,
+                    v => (Decimal)v
                     .Sum(n => n.Element("orders")
-                    .Elements("order").Count()) / (Decimal)g.Count());
+                    .Elements("order").Count()) / (Decimal)v.Count());
 
             return averageIntensity;
 
@@ -191,11 +191,11 @@ namespace Task5._3
 
         public Dictionary<int,int> CountStatisticsByMonths()
         {
-            var statisticsByMonths = listOfOrders.GroupBy(data => Convert.ToDateTime(data.Element("orderdate").Value).Month)
-                .OrderBy(g => g.Key)
+            var statisticsByMonths = listOfOrders.GroupBy(month => Convert.ToDateTime(month.Element("orderdate").Value).Month)
+                .OrderBy(k => k.Key)
                 .ToDictionary(
-                    g => g.Key,
-                    g => g.ToList().Count()
+                    k => k.Key,
+                    v => v.ToList().Count()
                 );
             return statisticsByMonths;
         }
@@ -203,11 +203,11 @@ namespace Task5._3
 
         public Dictionary<int, int> CountStatisticsByYears()
         {
-            var statisticsByYears = listOfOrders.GroupBy(data => Convert.ToDateTime(data.Element("orderdate").Value).Year)
-                .OrderBy(g => g.Key)
+            var statisticsByYears = listOfOrders.GroupBy(year => Convert.ToDateTime(year.Element("orderdate").Value).Year)
+                .OrderBy(k => k.Key)
                 .ToDictionary(
-                    g => g.Key,
-                    g => g.ToList().Count()
+                    k => k.Key,
+                    v => v.ToList().Count()
                 );
             return statisticsByYears;
         }
@@ -216,10 +216,10 @@ namespace Task5._3
         public Dictionary<string,int> CountStatisticsByDate()
         {
             var statisticsByDate = listOfOrders.GroupBy(data => DateTime.Parse(data.Element("orderdate").Value).ToString("yyyy.MM"))
-                .OrderBy(g => g.Key)
+                .OrderBy(k => k.Key)
                 .ToDictionary(
-                    g => g.Key,
-                    g => g.ToList().Count()
+                    k => k.Key,
+                    v => v.ToList().Count()
                 );
             return statisticsByDate;
         }
