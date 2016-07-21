@@ -12,7 +12,7 @@ namespace ParserForInt
         public bool FintFloats(string str)
         {
             String separ = System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator;
-            var res = new Regex(@"^[+|-]?[0-9]*(?:" + separ + "[0-9]*)?$");
+            var res = new Regex(@"\s*[0-9]*\" + separ + "[0-9]+$");
             return res.IsMatch(str);
         }
 

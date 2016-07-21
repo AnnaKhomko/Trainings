@@ -10,7 +10,11 @@ namespace Task6._1
     {
         static void Main(string[] args)
         {
-            
+            Logic logic = new Logic();
+            logic.CatchExceptions();
+            logic.ShowFirstChars();
+            Console.WriteLine($"Detail information about exceptions you can find in {ResourceData.LogFilePath} file");
+            Console.ReadLine();
         }
     }
 }
